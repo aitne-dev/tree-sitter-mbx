@@ -6,12 +6,14 @@
 
 /// <reference types="tree-sitter-cli/dsl" />
 // @ts-check
+const moonbit = require("tree-sitter-moonbit/grammar");
 
-module.exports = grammar({
+module.exports = grammar(moonbit, {
   name: "mbx",
-
   rules: {
-    // TODO: add the actual grammar rules
-    source_file: $ => "hello"
-  }
+    _expression: ($, original) => choice(original, $.mbx_element),
+    mbx_element: ($) => ' '
+  },
 });
+
+
