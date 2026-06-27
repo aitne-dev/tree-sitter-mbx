@@ -1,0 +1,39 @@
+{
+  "$schema": "https://tree-sitter.github.io/tree-sitter/assets/schemas/config.schema.json",
+  "grammars": [
+    {
+      "name": "mbx",
+      "camelcase": "Mbx",
+      "title": "Mbx",
+      "scope": "source.mbx",
+      "file-types": [
+        "mbx"
+      ],
+      "injection-regex": "^mbx$",
+      "class-name": "TreeSitterMbx"
+    }
+  ],
+  "metadata": {
+    "version": "0.1.0",
+    "license": "MIT",
+    "description": "Moonbit + Html (JSX-like) parser",
+    "authors": [
+      {
+        "name": "Arcelyth",
+        "email": "arcelyth@tutamail.com"
+      }
+    ],
+    "links": {
+      "repository": "https://github.com/Arcelyth/tree-sitter-mbx"
+    }
+  },
+  "bindings": {
+    "c": true,
+    "go": true,
+    "node": true,
+    "python": true,
+    "rust": true,
+    "swift": true,
+    "zig": false
+  }
+}
